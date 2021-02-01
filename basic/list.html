@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web 编程语言列表</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    Web 编程语言：
+    <ul>
+        <li v-for="(language, index) in languages">
+            {{ index }} : {{ language }}
+        </li>
+    </ul>
+    <div>
+        <label for="input">
+            <input type="text" id="input"/>
+        </label>
+        <button type="button" id="button">添加</button>
+    </div>
+</div>
+<script>
+    const app = new Vue({
+        el: '#app',
+        data: {
+            languages: [
+                'PHP',
+                'JavaScript',
+                'Python',
+                'Golang',
+                'Java'
+            ]
+        },
+        mounted: () => {
+            document.querySelector('#button').addEventListener('click', () => {
+                let language = document.querySelector('#input');
+                app.languages.push(language.value);  // 将输入语言添加到模型数据数组
+                language.value = '';  // 清空输入框
+            });
+        }
+    });
+</script>
+</body>
+</html>
