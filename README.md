@@ -1,6 +1,6 @@
 ## vue_learning vue_learning VUE基础学习 从入门到实践
 
-> ####总共6部分 存储在basic目录下
+> 总共6部分 存储在basic目录下
 * Vue.js 数据绑定的基本实现和代码分析
 * 使用 Vue.js Devtools 扩展作为 Vue 应用调试工具
 * Vue.js 列表渲染的基本使用和动态调整
